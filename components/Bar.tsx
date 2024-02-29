@@ -35,7 +35,7 @@ export default function Bar() {
         </Button>
 
         <Button variant="default" onClick={handleTheme}>
-          {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
+          {theme === 'light' ? <MoonIcon /> : <SunIcon />}
         </Button>
 
         <Avatar>
