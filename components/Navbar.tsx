@@ -3,7 +3,7 @@ import { Button } from './ui/button';
 
 export default function Navbar() {
   return (
-    <header className="bg-primary-foreground min-h-screen space-y-14">
+    <header className="hidden md:block bg-primary-foreground min-h-screen space-y-14">
       <div className="flex justify-between items-center gap-2 px-4 py-2 border-b border-b-primary">
         <Image
           className="w-1/4"
