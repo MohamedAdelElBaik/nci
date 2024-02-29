@@ -1,4 +1,8 @@
+import { Income } from './Income';
 import ItemsStatus from './ItemsStatus';
+import { SalesGraph } from './SalesGraph';
+import StokeTable from './StokeTable';
+import TopSelling from './TopSelling';
 import style from './page.module.css';
 
 export default function Dashboard() {
@@ -8,19 +12,19 @@ export default function Dashboard() {
         <ItemsStatus />
       </div>
       <div className={style.box2}>
-        <h1>box2</h1>
+        <SalesGraph />
       </div>
       <div className={style.box3}>
-        <h1>box3</h1>
+        <Income />
       </div>
       <div className={style.box4}>
-        <h1>box4</h1>
+        <Income />
       </div>
       <div className={style.box5}>
-        <h1>box5</h1>
+        <TopSelling />
       </div>
       <div className={style.box6}>
-        <h1>box6</h1>
+        <StokeTable />
       </div>
     </section>
   );
