@@ -6,6 +6,8 @@ import { ThemeProvider } from 'next-themes';
 import Navbar from '@/components/Navbar';
 // import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { NavbarMobile } from '../components/NavbarMobile';
+import Bar from '../components/Bar';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -24,8 +26,13 @@ export default function RootLayout({
       <body className={`${inter.className}`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className={style.container}>
-            <Navbar />
-            {children}
+            <div className="hidden md:block min-h-screen bg-primary-foreground">
+              <Navbar />
+            </div>
+            <div>
+              <Bar />
+              {children}
+            </div>
           </div>
         </ThemeProvider>
       </body>
