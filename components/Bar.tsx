@@ -13,9 +13,12 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { useTheme } from 'next-themes';
 
 export default function Bar() {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, systemTheme } = useTheme();
 
   function handleTheme() {
+    console.log(systemTheme);
+    if (theme === 'system')
+      setTheme(systemTheme === 'light' ? 'dark' : 'light');
     if (theme === 'dark') setTheme('light');
     if (theme === 'light') setTheme('dark');
   }
