@@ -1,6 +1,7 @@
 'use client';
 
 import './globals.css';
+import style from './layout.module.css';
 import { ThemeProvider } from 'next-themes';
 import Navbar from '@/components/Navbar';
 // import type { Metadata } from 'next';
@@ -22,10 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className}`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div
-            className="grid"
-            style={{ gridTemplateColumns: 'minmax(200px, 300px) 1fr' }}
-          >
+          <div className={style.container}>
             <Navbar />
             {children}
           </div>
