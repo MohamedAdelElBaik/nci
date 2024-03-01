@@ -1,16 +1,15 @@
 import {
   BellIcon,
   EnvelopeClosedIcon,
-  MagnifyingGlassIcon,
   MoonIcon,
   SunIcon,
 } from '@radix-ui/react-icons';
 import { NavbarMobile } from './NavbarMobile';
-import { Input } from './ui/input';
 import { Button } from './ui/button';
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { useTheme } from 'next-themes';
+import Search from './Search';
 
 export default function Bar() {
   const { theme, setTheme, systemTheme } = useTheme();
@@ -46,17 +45,6 @@ export default function Bar() {
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
       </div>
-    </div>
-  );
-}
-
-function Search() {
-  return (
-    <div className="hidden md:flex w-full max-w-sm items-center space-x-2">
-      <Input placeholder="search" />
-      <Button>
-        <MagnifyingGlassIcon />
-      </Button>
     </div>
   );
 }
