@@ -1,5 +1,5 @@
 'use client';
-import { Bar, BarChart, Line, LineChart, ResponsiveContainer } from 'recharts';
+import { Line, LineChart, ResponsiveContainer } from 'recharts';
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 
